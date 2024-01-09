@@ -15,19 +15,19 @@ import Col from 'react-bootstrap/ListGroup';
 
 
 function AllTheBooks() {
-  console.log(fantasy)
-  //book è il paramentro da map , il singolo elemento di fantasy
+  console.log(fantasy) 
+  //book è il paramentro da map , il singolo elemento di fantasy lo metti a funzione e fai il return della funzione come un react cosi da leggere i libri fantasy
     return (
               <Row>
-        {fantasy.map(function (book){
-          console.log(book)
+        {fantasy.map(function (libri){
+          console.log(libri)
           return( 
           
-           <Col xs={12} md={4}  key={book.asin}>
+           <Col xs={12} md={4}  key={libri.asin}>
         <Card style={{ width: '18rem' }}>
-          <Card.Img variant="top" src="holder.js/100px180?text=Image cap" />
+          <Card.Img variant="top" src={libri.img} />
             <Card.Body>
-              <Card.Title>{book.title}</Card.Title>
+              <Card.Title>{libri.title}</Card.Title>
               <Card.Text>
                
               </Card.Text>
