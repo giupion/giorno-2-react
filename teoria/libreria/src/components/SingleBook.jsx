@@ -1,23 +1,42 @@
 import React, { Component } from 'react'
 
 import { Image,Button,Row ,Col,Container,Card,ListGroup } from "react-bootstrap";
+import CommentArea from './CommentArea ';
 
 export default class SingleBook extends Component {
+
+
+    state={selected:false,}
+    //metti nello stato la proprieta selected in falso
   render() {
     return (
-      <div>
-         <Card style={{ width: '18rem' }}>
-      <Card.Img variant="top" src={this.props.libro.img}  />
-      <Card.Body>
-        <Card.Title>{this.props.libro.title}</Card.Title>
-        <Card.Text>
-          Some quick example text to build on the card title and make up the
-          bulk of the card's content.
-        </Card.Text>
-        <Button variant="primary">Go somewhere</Button>
-      </Card.Body>
-    </Card>
-      </div>
+      //alla proprietà onclick setta lo stato come true, e metti il border rosso
+        <Card  onClick={()=>this.setState({selected: !this.state.selected})} style={{  width:'287px', height:'800px' , border: this.state.selected ?  '3px solid blue': 'none'  }}>
+        <Card.Img variant="top" src={this.props.libro.img}  style={{ width: '100%', height: '400px' }} />
+         
+        
+          <Card.Body>
+            <Card.Title>{this.props.libro.title}</Card.Title>
+            <Card.Text>
+             
+            </Card.Text>
+            </Card.Body>
+            <ListGroup className="list-group-flush" >
+              <ListGroup.Item>category: {this.props.libro.category}</ListGroup.Item>
+              <ListGroup.Item>price: {this.props.libro.price}</ListGroup.Item>
+              <ListGroup.Item>asin:{this.props.libro.asin}</ListGroup.Item>
+            </ListGroup>
+              <Card.Body>
+              <Button variant="primary me-5">Buy</Button>
+                <Button variant="primary me-5">Remove</Button>
+                <CommentArea/>
+              </Card.Body>
+            
+            </Card>
+
+      
+   //libro sarebbe elemento da book list
+      
     )
   }
 }

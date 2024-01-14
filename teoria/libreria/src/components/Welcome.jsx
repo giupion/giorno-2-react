@@ -3,7 +3,7 @@ import Card from 'react-bootstrap/Card';
 
 function Welcome() {
   return (
-    <Card>
+    <Card className=" fantasycolor ">
       <Card.Header>Welcome</Card.Header>
       <Card.Body>
         <Card.Title>My Shop</Card.Title>

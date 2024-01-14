@@ -4,7 +4,7 @@
     
     function MyFooter() {
       return (
-        <Card className="text-center">
+        <Card className=" fantasycolor text-center">
           <Card.Header>Featured</Card.Header>
           <Card.Body>
             <Card.Title>Special title treatment</Card.Title>

@@ -9,19 +9,19 @@ import BookList from './components/BookList';
 import { Image ,Button  ,Row ,Col,Container } from "react-bootstrap";
 
 import fantasy from './books/fantasy.json';
-
+//importo fantasu e metto in libri da app.js fantasy destrutturato in libri cosi lo uso in booklist
 function App() {
   return (
    
         
-<div className="App">
-<MyNav/>
+<div className="fantasycolor">
+<MyNav className="primary"/>
 
-<Welcome/>
+<Welcome className="primary"/>
 {/*AllTheBooks*/}
-<BookList libri={fantasy}/>
+<BookList libri={fantasy /*è il json destrutturato sotto forma di array , quindi glielo passo il contenuto a libri vado a boolist cosi*/}/>
 
-<MyFooter/>
+<MyFooter className="primary"/>
     </div>
 
   );

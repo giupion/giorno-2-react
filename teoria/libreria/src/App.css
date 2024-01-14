@@ -1,0 +1,10 @@
+.allinearow{display:flex;
+
+justify-content: center;
+align-items: center;}
+
+
+.fantasycolor{  background-image: linear-gradient(to right top, #d16ba5, #c777b9, #ba83ca, #aa8fd8, #9a9ae1, #929ae7, #879aec, #7b9bf2, #7a8ff8, #7f82fc, #8a72fd, #995ffb) !important;  }
+
+
+ .cardimg{object-fit:cover;}
