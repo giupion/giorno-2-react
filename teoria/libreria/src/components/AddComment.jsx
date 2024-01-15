@@ -44,7 +44,7 @@ class AddComment extends Component {
 
   render() {
     return (
-      <div className="my-5">
+      <div className="d-flex my-5 align-center justify-center">
         <Form onSubmit={this.sendComment} style={{  width:'250px' ,text:'center' }} className="bg-white">
           <Form.Group>
             <Form.Label>Comment text</Form.Label>

@@ -25,6 +25,7 @@ const SingleComment = ({ comment }) => {
   }
 
   return (
+    <div className='mb-5'>
     <ListGroup.Item >
       {comment.comment}
       <Button
@@ -35,6 +36,7 @@ const SingleComment = ({ comment }) => {
         Delete
       </Button>
     </ListGroup.Item>
+    </div>
   )
 }
 
