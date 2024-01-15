@@ -18,7 +18,7 @@ class CommentArea extends Component {
   componentDidMount = async () => {
     try {
       let response = await fetch(
-        'https://striveschool-api.herokuapp.com/api/books/0316438960/comments ',
+        'https://striveschool-api.herokuapp.com/api/books/110188603X/comments ',
         {
           headers: {
             Authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTc4M2YyOWMwNTgzNTAwMTg1MjMxODMiLCJpYXQiOjE3MDUyNjc5MTQsImV4cCI6MTcwNjQ3NzUxNH0.NJf5FnDV8gxN0ic8xOvI-xG5s45rCVsBiExJWQU4Tvs',
@@ -47,6 +47,7 @@ class CommentArea extends Component {
         {this.state.isError && <Error />}
         <AddComment asin={this.props.asin} className="bordo" />
         <CommentList commentsToShow={this.state.comments} className="bordo"/>
+        
         </>
       
     )

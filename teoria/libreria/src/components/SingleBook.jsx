@@ -35,6 +35,7 @@ export default class SingleBook extends Component {
             
             </Card>
             {this.state.selected && <CommentArea asin={this.props.libro.asin}  />}
+            
       </>
    //libro sarebbe elemento da book list
       
