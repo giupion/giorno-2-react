@@ -9,7 +9,7 @@ export default class SingleBook extends Component {
     state={selected:false,}
     //metti nello stato la proprieta selected in falso
   render() {
-    return (
+    return 
       <>
       
         <Card  onClick={()=>this.setState({selected: !this.state.selected})} style={{  width:'287px', height:'1300px' , border: this.state.selected ?  '3px solid blue': 'none'  }}>
