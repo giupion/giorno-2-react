@@ -38,7 +38,7 @@ export default class BookList extends Component {
             {this.props.libri.map((elemento) => ( //l'elemento del map lo rendo uguale a libro cosi ho l'oggetto e glielo passo
              //faccio un map di libri, questo libri lo prendo da app , metto booklist e gli passo libri={fantasy con gli elementi destrutturati }
             //per ogni elemento di libri={fantasy mappo e faccio na colonna contente tutti gli elementi  che sarebbero un componente, singlebooks. L}
-              <Col xs={12} md={3} key={elemento.asin} className="mt-5 mb-5 me-5 ms-5 ">
+              <Col xs={12} md={4} key={elemento.asin} className="mt-5 mb-5 me-5 ms-5 ">
                 <SingleBook libro={elemento} />
               </Col>
             ))}
