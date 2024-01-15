@@ -10,7 +10,8 @@ export default class SingleBook extends Component {
     //metti nello stato la proprieta selected in falso
   render() {
     return (
-      //alla proprietà onclick setta lo stato come true, e metti il border rosso
+      <>
+      
         <Card  onClick={()=>this.setState({selected: !this.state.selected})} style={{  width:'287px', height:'1000px' , border: this.state.selected ?  '3px solid blue': 'none'  }}>
         <Card.Img variant="top" src={this.props.libro.img}  style={{ width: '100%', height: '400px' }} />
          
@@ -33,8 +34,8 @@ export default class SingleBook extends Component {
               </Card.Body>
             
             </Card>
-
-      
+            {this.state.selected && <CommentArea asin={this.props.libro.asin}  />}
+      </>
    //libro sarebbe elemento da book list
       
     )

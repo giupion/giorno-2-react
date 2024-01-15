@@ -1,9 +1,11 @@
 
+
 import { Component } from 'react'
 import CommentList from './CommentList'
 import AddComment from './AddComment'
 import Loading from './Loading'
 import Error from './Error'
+import {Container} from 'react-bootstrap'
 
 class CommentArea extends Component {
   state = {
@@ -16,12 +18,11 @@ class CommentArea extends Component {
   componentDidMount = async () => {
     try {
       let response = await fetch(
-        'https://striveschool-api.herokuapp.com/api/books/0316438960/comments', 
-         
+        'https://striveschool-api.herokuapp.com/api/books/0316438960/comments ',
         {
-          headers:{
-                Authorization:'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTc4M2YyOWMwNTgzNTAwMTg1MjMxODMiLCJpYXQiOjE3MDUyNjc5MTQsImV4cCI6MTcwNjQ3NzUxNH0.NJf5FnDV8gxN0ic8xOvI-xG5s45rCVsBiExJWQU4Tvs'
-            },
+          headers: {
+            Authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTc4M2YyOWMwNTgzNTAwMTg1MjMxODMiLCJpYXQiOjE3MDUyNjc5MTQsImV4cCI6MTcwNjQ3NzUxNH0.NJf5FnDV8gxN0ic8xOvI-xG5s45rCVsBiExJWQU4Tvs',
+          },
         }
       )
       console.log(response)
@@ -40,20 +41,19 @@ class CommentArea extends Component {
 
   render() {
     return (
-      <div className="text-center">
+        <Container>
+     
         {this.state.isLoading && <Loading />}
         {this.state.isError && <Error />}
         <AddComment asin={this.props.asin} />
         <CommentList commentsToShow={this.state.comments} />
-      </div>
+      
+      </Container>
     )
   }
 }
 
 export default CommentArea
-
-
-
 
 
 

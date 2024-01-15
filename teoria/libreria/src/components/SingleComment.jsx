@@ -5,15 +5,17 @@ const SingleComment = ({ comment }) => {
     try {
       let response = await fetch(
         'https://striveschool-api.herokuapp.com/api/comments/' + asin,
+       
         {
           method: 'DELETE',
           headers: {
-            Authorization: 'Bearer your-auth-token-goes-here',
+            Authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTc4M2YyOWMwNTgzNTAwMTg1MjMxODMiLCJpYXQiOjE3MDUyNjc5MTQsImV4cCI6MTcwNjQ3NzUxNH0.NJf5FnDV8gxN0ic8xOvI-xG5s45rCVsBiExJWQU4Tvs',
           },
         }
       )
       if (response.ok) {
         alert('Comment was deleted successfully!')
+        
       } else {
         alert('Error - comment was NOT deleted!')
       }
@@ -23,7 +25,7 @@ const SingleComment = ({ comment }) => {
   }
 
   return (
-    <ListGroup.Item>
+    <ListGroup.Item >
       {comment.comment}
       <Button
         variant="danger"
