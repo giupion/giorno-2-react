@@ -41,14 +41,14 @@ class CommentArea extends Component {
 
   render() {
     return (
-        <Container>
-     
+      
+     <>
         {this.state.isLoading && <Loading />}
         {this.state.isError && <Error />}
-        <AddComment asin={this.props.asin} />
-        <CommentList commentsToShow={this.state.comments} />
+        <AddComment asin={this.props.asin} className="bordo" />
+        <CommentList commentsToShow={this.state.comments} className="bordo"/>
+        </>
       
-      </Container>
     )
   }
 }
